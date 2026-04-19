@@ -13,6 +13,7 @@
 }
 body{
     background:#f4f7f9;
+    padding-top: 80px;
 }
 header{
     position:fixed;
@@ -24,7 +25,7 @@ header{
     display:flex;
     justify-content:center;
     align-items:center;
-    z-index:1000;
+    z-index:9999;
     box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -85,7 +86,9 @@ header{
 
 .about-section{
     /* padding-top: 120px; */
-    height:500px;
+    min-height: 500px;
+    height: auto;
+    padding: 120px 20px 60px;
     background:
     linear-gradient(rgba(0,80,120,0.7), rgba(0,80,120,0.7)),
     url("./about.png");
@@ -208,11 +211,10 @@ header{
     gap: 40px;
 }
 
-/* top text full width */
 .values-text{
     text-align: center;
     max-width: 700px;
-    padding-top: 0; /* remove 150px */
+    padding-top: 0; 
 }
 
 .values-text h2{
@@ -225,53 +227,6 @@ header{
     font-size:18px;
 }
 
-/* cards container */
-.value-card-box{
-    display: flex;
-    justify-content: space-between;
-    gap: 250px;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-/* each card */
-.value-card{
-    flex: 1;
-    min-width: 220px;
-    border-radius:12px;
-    padding:25px;
-    text-align:center;
-    background:#fafafa;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:0.3s;
-}.values-container{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-/* top text full width */
-.values-text{
-    text-align: center;
-    max-width: 700px;
-    padding-top: 0; /* remove 150px */
-}
-
-.values-text h2{
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.values-text p{
-    color:#6a7d86;
-    font-size:18px;
-}
-
-/* cards container */
 .value-card-box{
     display: flex;
     justify-content: space-between;
@@ -280,7 +235,6 @@ header{
     flex-wrap: wrap;
 }
 
-/* each card */
 .value-card{
     flex: 1;
     min-width: 220px;
@@ -369,7 +323,6 @@ header{
 
 .foot-main{
     color:white;
-    /* font-family:Arial, Helvetica, sans-serif; */
 }
 
 .foot-first{
@@ -436,8 +389,13 @@ header{
     color:#b0bec5;
 }
 @media (max-width: 768px) {
-
-  /* Navbar */
+    body{
+        padding-top: 0;
+    }
+    header {
+    position: static;   
+    height: auto;       
+  }
   .navbar-container {
     flex-direction: column;
     gap: 10px;
@@ -452,8 +410,6 @@ header{
     flex-direction: column;
     gap: 10px;
   }
-
-  /* Hero */
   .container1 h1 {
     font-size: 32px;
     margin-top: 120px;
@@ -467,14 +423,10 @@ header{
   .hero-buttons {
     flex-direction: column;
   }
-
-  /* Services */
   .services-boxes {
     flex-direction: column;
     padding: 0 15px;
   }
-
-  /* Cards */
   .image-box {
     flex-direction: column;
   }
@@ -486,8 +438,6 @@ header{
   .view-detail {
     width: 100%;
   }
-
-  /* Footer */
   .foot-first {
     flex-direction: column;
   }

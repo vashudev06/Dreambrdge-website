@@ -82,7 +82,7 @@ header{
     background:#163a46;
 }
 .products{
-    background:linear-gradient(to right,#2c5c8a,#1f4f7a);
+    background:hsl(197, 60%, 25%);
     padding-top:180px;
     text-align:center;
     color:white;
@@ -161,7 +161,9 @@ header{
     margin-bottom:10px;
     color: #163a46;
 }
-
+.metal-container h4{
+    color: #163a46;
+}
 .metal-text p{
 color:#555;
 margin-bottom:20px;
@@ -186,14 +188,16 @@ background:#ffffff;
 }
 
 .electrical-container{
-max-width:1100px;
-margin:auto;
-display:flex;
-align-items:center;
-gap:40px;
-flex-wrap:wrap;
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
 }
-
+.electrical-container h4{
+    color: #163a46;
+}
 .electrical-text{
 flex:1;
 }
@@ -229,17 +233,19 @@ max-width:500px;
 border-radius:10px;
 }
 .wooden{
-padding:60px 20px;
-background:#f5f5f5;
+    padding:60px 20px;
+    background:#f5f5f5;
 }
-
+.wooden h4{
+    color: #163a46;
+}
 .wooden-container{
-max-width:1100px;
-margin:auto;
-display:flex;
-align-items:center;
-gap:40px;
-flex-wrap:wrap;
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
 }
 
 .wooden-image img{
@@ -289,7 +295,9 @@ align-items:center;
 gap:40px;
 flex-wrap:wrap;
 }
-
+.ev-container h4{
+    color: #163a46;
+}
 .ev-text{
 flex:1;
 }
@@ -519,7 +527,10 @@ border-radius:10px;
 }
 @media (max-width: 768px) {
 
-  /* Navbar */
+  header {
+    position: static;   
+    height: auto;       
+  }
   .navbar-container {
     flex-direction: column;
     gap: 10px;
@@ -534,8 +545,6 @@ border-radius:10px;
     flex-direction: column;
     gap: 10px;
   }
-
-  /* Hero */
   .container1 h1 {
     font-size: 32px;
     margin-top: 120px;
@@ -550,13 +559,11 @@ border-radius:10px;
     flex-direction: column;
   }
 
-  /* Services */
   .services-boxes {
     flex-direction: column;
     padding: 0 15px;
   }
 
-  /* Cards */
   .image-box {
     flex-direction: column;
   }
@@ -568,8 +575,10 @@ border-radius:10px;
   .view-detail {
     width: 100%;
   }
+  .grid-container {
+    grid-template-columns: 1fr;  
+  }
 
-  /* Footer */
   .foot-first {
     flex-direction: column;
   }
